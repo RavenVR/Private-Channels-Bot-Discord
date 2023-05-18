@@ -9,6 +9,7 @@ bot = lightbulb.BotApp(
     token=token, default_enabled_guilds=(guild_id), intents=hikari.Intents.ALL
 )
 
+
 @bot.command
 @lightbulb.command("create-channel", "Create a channel only for you and select people")
 @lightbulb.implements(lightbulb.SlashCommand)
@@ -252,6 +253,12 @@ async def removechannel(ctx: lightbulb.Context):
             await ctx.respond(f"Deleted {channel.name}")
             return
     await ctx.respond("You dont own a channel yet!")
+    
+@bot.command()
+@lightbulb.command("help", "how to use the bot")
+async def help(ctx):
+    ctx.respond("Use /create-channel to create a category, use /remove-channel to remove the category, use /add-member to add a memberto it and use /remove-member to remove a member\n\n this bot was made using hikari and developed by RavenVR#6650.")
+
 bot.run(
     status=hikari.Status.ONLINE,
     activity=hikari.Activity(
