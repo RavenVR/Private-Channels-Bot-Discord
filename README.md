@@ -13,4 +13,4 @@ now invite your bot to your server with admin permissions then there you have it
 /remove-member: remove someone from your channel.
 
 ## Info
-this bot already checks if someone has a channed, so if they do, they cant just spam channels.
+this bot already checks if someone has a channel, so if they do, they cant just spam channels.
